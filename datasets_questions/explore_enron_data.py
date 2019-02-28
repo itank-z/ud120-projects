@@ -19,4 +19,19 @@ import pickle
 
 enron_data = pickle.load(open("../final_project/final_project_dataset.pkl", "r"))
 
+print enron_data["SKILLING JEFFREY K"]
+print "\n\n"
 
+
+minm = enron_data["SKILLING JEFFREY K"]["exercised_stock_options"]
+maxm = enron_data["SKILLING JEFFREY K"]["exercised_stock_options"]
+
+for person in enron_data.keys():
+	if enron_data[person]["exercised_stock_options"] != 'NaN':
+		if minm > enron_data[person]["exercised_stock_options"]:
+			minm = enron_data[person]["exercised_stock_options"]
+		if maxm < enron_data[person]["exercised_stock_options"]:
+			maxm = enron_data[person]["exercised_stock_options"]
+
+print "min", minm
+print "max", maxm
