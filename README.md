@@ -1,4 +1,1 @@
-ud120-projects
-==============
-
-Starter project code for students taking Udacity ud120
+This repository includes my project implementations (including the final project) during the udacity ud-120 course.
